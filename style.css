@@ -1,7 +1,18 @@
-body {
-    font-family: Arial;
-    font-size: 120%;
+ 
+  @font-face {
+    font-family: myFirstFont;
+    src: url("../Brazilian-Portuguese-Quiz-Harry-Potter/assets/font/HARRYP__.TTF");
+  }
 
+body {
+    font-family: myFirstFont;
+    font-size: 120%;
+    background-image:  url('../Brazilian-Portuguese-Quiz-Harry-Potter/assets/pics/hogwarts.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 800px;
+    background-image: 0.5;
   }
   
   a {
@@ -13,18 +24,66 @@ body {
   a:hover {
     color: #8570a5;
   }
-  
+ 
+
+  @font-face {
+    font-family: mySecondFont;
+    src: url("../Brazilian-Portuguese-Quiz-Harry-Potter/assets/font/purple-3.ttf");
+  }
+
+  .harrypotter, .quiz-title, button, .scores, .timer, .highscores-title{
+    font-family: myFirstFont;
+    font-size: 40px;
+    color: #740001;
+  }
+
+  .quiz-title{
+    font-size: 60px;
+    -webkit-text-stroke-color: black;
+    -webkit-text-stroke-width: 0.01px;
+    margin-top: 0px;
+  }
+
+  .harrypotter{
+    font-size: 120px;
+    -webkit-text-stroke-color: black;
+    -webkit-text-stroke-width: 0.01px;
+    color: #eeba30;
+    margin-bottom: 0px;
+    padding-top: 8%;
+  }
+
+  .quiz-text{
+    font-family: mySecondFont;
+    font-size: 150%;
+    font-weight: 700;
+    padding: 0px 50px;
+  }
+
+  #question-title{
+    font-family: mySecondFont;
+    font-size: 150%;
+    padding: 5%;
+    padding-bottom: 0;
+  }
+
+  .start{
+    background-color: #dddddd8d;
+    border-radius: 10px;
+    
+  }
+
   button {
     display: inline-block;
-    margin: 5px;
+    margin: 10px;
     cursor: pointer;
-    font-size: 100%;
     background-color: #740001;
     border-radius: 5px;
-    padding: 2px 10px;
+    padding: 3% 5% 2%;
     color: #eeba30;
     border: 0;
     transition: background-color 0.1s;
+
   }
   
   button:hover {
@@ -72,15 +131,23 @@ body {
     position: absolute;
     top: 10px;
     left: 10px;
+
   }
   
-  .feedback {
+  .feedback, .correct, .wrong {
     font-style: italic;
-    font-size: 120%;
+    font-size: 200%;
     margin-top: 20px;
     padding-top: 10px;
-    color: gray;
     border-top: 2px solid #ccc;
+  }
+
+  .correct{
+    color: #eeba30;
+  }
+
+  .wrong{
+    color: #740001;
   }
   
   .timer {

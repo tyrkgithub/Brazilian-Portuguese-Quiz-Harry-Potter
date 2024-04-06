@@ -92,9 +92,12 @@ function updateScore(event) {
   if (event.target.value === questions[counter].correctAnswer) {
     score++;
     feedback.innerHTML = "Correct!";
+    document.getElementById("feedback").className = "correct"
   } else {
     time -= 10;
-    feedback.innerHTML = `Wrong! The correct answer was ${questions[counter].correctAnswer}`;
+    feedback.innerHTML = `Wrong! The correct answer was ${questions[counter].correctAnswer}` ;
+    document.getElementById("feedback").className = "wrong"
+
   }
   nextQuestion();
 }
